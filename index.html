@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าร้านค้าออนไลน์</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 20px;
+            /* พื้นหลังไล่เฉดสีให้ดูหรู */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* การ์ดสินค้า */
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        /* สไลด์รูปภาพ */
+        .image-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            height: 350px;
+            background: #eee;
+        }
+        .image-slider img {
+            min-width: 100%;
+            object-fit: cover;
+            scroll-snap-align: start;
+        }
+        .image-slider::-webkit-scrollbar { display: none; }
+
+        .content {
+            padding: 25px;
+        }
+
+        .price-tag {
+            background: #ff4757;
+            color: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            margin: 0 0 10px 0;
+            color: #2f3542;
+        }
+
+        /* --- ส่วนรายละเอียดสินค้า --- */
+        .details {
+            color: #57606f;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            border-top: 1px dashed #ced4da;
+            padding-top: 15px;
+        }
+
+        .details ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* ปุ่มติดต่อ */
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn {
+            text-align: center;
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn-line { background: #06c755; color: white; }
+        .btn-call { background: #2f3542; color: white; }
+        .btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+        .scroll-hint {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            padding: 5px;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>ร้านค้าของฉัน</h1>
+        <p>ยินดีต้อนรับครับ เลือกชมสินค้าได้เลย</p>
+    </div>
+
+    <div class="product-card">
+        <div class="scroll-hint">⬅️ เลื่อนนิ้วเพื่อดูรูปเพิ่มเติม ➡️</div>
+        <div class="image-slider">
+            <img src=https://scontent.fvte3-1.fna.fbcdn.net/v/t39.30808-6/672675312_1646234616427072_8698170155164881127_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeH0VixikgnFosISioL8yr23IUg1KrVt0qMhSDUqtW3So6NWCJc1nRzN3nApH-k_d2LrSDNqOXIDrhQJGwsV0oSA&_nc_ohc=PBHnijSMEYUQ7kNvwGXmbZS&_nc_oc=Adr3NRTWIHJ7ZgDBAqFp4vtyXqKyfQhO_962Y91LdjWg8W_4KBxDZ1vPkQ2S5FV1YVM&_nc_zt=23&_nc_ht=scontent.fvte3-1.fna&_nc_gid=Ywd6-oMdWbzeDk6ErTxa1A&_nc_ss=7a3a8&oh=00_Af1qb0KA1bwa6a2NQvs7CZ7P9fcrKdbCYdkGT5JlU0FUiA&oe=69EA5145 alt="รูป 1">
+            <img src="https://via.placeholder.com/600x400/48dbfb/fff?text=รูปที่+2" alt="รูป 2">
+            <img src="https://via.placeholder.com/600x400/1dd1a1/fff?text=รูปที่+3" alt="รูป 3">
+        </div>
+
+        <div class="content">
+            <div class="price-tag"></div>
+            <h2 class="product-title"></h2>
+            
+            <div class="details">
+                <strong>รายละเอียดสินค้า:</strong>
+                <ul>
+                    <li>ຮ້ານ Nungsue Vg ພ້ອມໃຫ້ບໍລິການ! ✨📱
+
+🔐 ບໍລິການ Google & Apple ID ຄົບວົງຈອນ
+
+📌 ຮັບສ້າງບັນຊີໃໝ່
+• Gmail (Android): 💰 15,000 Kip
+• Apple ID (iOS): 💰 35,000 Kip
+
+🌍 ຮັບຍ້າຍພາກພື້ນ/ປະເທດ
+• ຍ້າຍ Gmail (ລາວ ➝ ໄທ/ປະເທດອື່ນ): 💰 25,000 Kip
+• ຍ້າຍ Apple ID (ລາວ ➝ ໄທ/ປະເທດອື່ນ): 💰 15,000 Kip
+
+📞 ສົນໃຈຕິດຕໍ່
+📘 Facebook: Nungsue Vg
+💬 WhatsApp: 2099340962</li>
+                    
+                </ul>
+                <p></p>
+            </div>
+
+            <div class="contact-box">
+    <a href="https://wa.me/2099340962" class="btn" style="background-color: #25D366; color: white;">WhatsApp</a>
+    
+    <a href="https://www.facebook.com/share/18mDF2rFYP/" class="btn" style="background-color: #1877F2; color: white;">Facebook: Nungsuevg</a>
+</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าร้านค้าออนไลน์</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 20px;
+            /* พื้นหลังไล่เฉดสีให้ดูหรู */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* การ์ดสินค้า */
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        /* สไลด์รูปภาพ */
+        .image-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            height: 350px;
+            background: #eee;
+        }
+        .image-slider img {
+            min-width: 100%;
+            object-fit: cover;
+            scroll-snap-align: start;
+        }
+        .image-slider::-webkit-scrollbar { display: none; }
+
+        .content {
+            padding: 25px;
+        }
+
+        .price-tag {
+            background: #ff4757;
+            color: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            margin: 0 0 10px 0;
+            color: #2f3542;
+        }
+
+        /* --- ส่วนรายละเอียดสินค้า --- */
+        .details {
+            color: #57606f;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            border-top: 1px dashed #ced4da;
+            padding-top: 15px;
+        }
+
+        .details ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* ปุ่มติดต่อ */
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn {
+            text-align: center;
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn-line { background: #06c755; color: white; }
+        .btn-call { background: #2f3542; color: white; }
+        .btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+        .scroll-hint {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            padding: 5px;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>ร้านค้าของฉัน</h1>
+        <p>ยินดีต้อนรับครับ เลือกชมสินค้าได้เลย</p>
+    </div>
+
+    <div class="product-card">
+        <div class="scroll-hint">⬅️ เลื่อนนิ้วเพื่อดูรูปเพิ่มเติม ➡️</div>
+        <div class="image-slider">
+            <img src=https://scontent.fvte1-1.fna.fbcdn.net/v/t39.30808-6/655112365_1627568884960312_3791998634258454175_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeGeufx3NWsSKE27KYz3Lyvnzz8smTDWugDPPyyZMNa6AHLFEajvOm38AFIGlJg-y_4SLQmGAs2DDgKsdwdDm4fP&_nc_ohc=ac2R4tY-rB8Q7kNvwHNpwSr&_nc_oc=AdqmjbPo3pvsv6sOfwSZcgXOaUCpc5VUx3i61G-dsHLoEqOq8DcbM4GcBjfGsUD1X5A&_nc_zt=23&_nc_ht=scontent.fvte1-1.fna&_nc_gid=Mg-xqg0duA1C1WGS1RZSJw&_nc_ss=7a3a8&oh=00_Af0Qv0b9YxXWMCK7ivIPBysv-FAIqbKc5V75I_99J0di5g&oe=69EA85DB alt="รูป 1">
+            <img src=https://scontent.fvte5-1.fna.fbcdn.net/v/t39.30808-6/655576562_1627568964960304_7241982925855396514_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeGNvOTP5RKb2gQVtHt0T-WF36ykgJNAzbbfrKSAk0DNtmtGBqnWp3jNRhmj3PY9Pw1SpZF1tIEp1u5KWYiDoc5T&_nc_ohc=sliRpqlMxGcQ7kNvwElz936&_nc_oc=Ado7_lUxbciQ_X3uUTEU6BOMjeDU33Sjarl58HGMyahzo4iFK2N2nOOoBZCRmgJX2MA&_nc_zt=23&_nc_ht=scontent.fvte5-1.fna&_nc_gid=4G3bQxVNUD2eIvF8ej25Iw&_nc_ss=7a3a8&oh=00_Af1cvzeIs-NR7DRGuwXyhVrfLmzTGCrCMMokwQ_4C3MCAQ&oe=69EA7113 alt="รูป 2">
+            <img src=https://scontent.fvte1-1.fna.fbcdn.net/v/t39.30808-6/655270932_1627568924960308_8326684874461693801_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFeYP5bFeWddUQoHj1U5nLQgZw8axqU25aBnDxrGpTblkg53KYOlRZbR796jA_Ex1uz-6IqLaCKtjuIn41mH_YY&_nc_ohc=bMt9PdPGF-wQ7kNvwG0Qf3k&_nc_oc=AdomprNdOP6YD_6rg-TFcNWdTyiQGTZ1TGnzsREcGk7HkFQ-_KiM5hedivsgKsfhwaw&_nc_zt=23&_nc_ht=scontent.fvte1-1.fna&_nc_gid=oJWqy-G7q5L744TNGDiyvA&_nc_ss=7a3a8&oh=00_Af1ee0GPd_zr-GyA-uuqAubNDjNlSdb7HK7lGaeUIUnTmw&oe=69EA7D1A alt="รูป 3">
+        </div>
+
+        <div class="content">
+            <div class="price-tag">ราคา</div>
+            <h2 class="product-title"></h2>
+            
+            <div class="details">
+                <strong>รายละเอียดสินค้า:</strong>
+                <ul>
+                    <li>ใช้งานได้นาน 7-10 วัน ต่อการชาร์จ 1 ครั้ง</li>
+                    <li>กันน้ำมาตรฐาน IP68 ใส่ว่ายน้ำได้</li>
+                    <li>วัดอัตราการเต้นของหัวใจได้แม่นยำ</li>
+                    <li>รับประกันศูนย์ไทย 1 ปีเต็ม</li>
+                </ul>
+                <p>สินค้านี้ผลิตจากวัสดุพรีเมียม ดีไซน์สวยทันสมัย เหมาะกับทุกเพศทุกวัยครับ มีของพร้อมส่งทันทีไม่ต้องรอพรีออเดอร์</p>
+            </div>
+
+            <div class="contact-box">
+                <a href="https://line.me/ti/p/ID-LINE" class="btn btn-line">แชทไลน์</a>
+                <a href="tel:0812345678" class="btn btn-call">โทรเลย</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
